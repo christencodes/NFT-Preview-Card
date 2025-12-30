@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  /* Primary */
+  --blue-500: hsl(215, 51%, 70%);
+  --blue-400: hsl(178, 100%, 50%);
+  /* Neutral */
+  --blue-950: hsl(217, 54%, 11%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-800: hsl(215, 32%, 27%);
+  /* Font */
+  --font-size: 18px;
+  --default-family: "Outfit", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+body {
+  background-color: var(--blue-950);
+  display: grid;
+  place-content: center;
+  font-family: var(--default-family);
+}
+
+.card {
+  padding: 1.3rem;
+  width: 250px;
+  border-radius: 8px;
+
+  background-color: var(--blue-900);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-image {
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.overlay {
+  background-color: var(--blue-400);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  display: grid;
+  place-content: center;
+}
+
+.overlay:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.overlay img {
+  opacity: 1;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.card-title {
+  color: white;
+  font-size: 0.6rem;
+  font-weight: var(--fw-600);
+}
+
+.card-info {
+  color: var(--blue-500);
+}
+
+.card-info p {
+  font-size: 0.9rem;
+}
+
+.card-extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-extra small {
+  color: var(--blue-500);
+}
+
+.rule {
+  width: 100%;
+  border-bottom: 1px solid var(--blue-500);
+}
+
+.card-cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.card-cost img {
+  width: 10px;
+}
+
+.card-cost p {
+  color: var(--blue-400);
+}
+
+.card-time {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.card-time p {
+  color: var(--blue-500);
+  font-size: 0.8rem;
+}
+
+.card-avatar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-avatar img {
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  color: var(--blue-500);
+}
+
+.user-info span {
+  color: white;
+}
